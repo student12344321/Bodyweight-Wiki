@@ -1,0 +1,76 @@
+/* ตั้งค่าพื้นฐาน */
+body {
+    font-family: 'Kanit', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    text-align: center;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* จัดวางหุ่นหน้า-หลังให้อยู่คู่กัน */
+.main-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* ถ้าจอเล็กให้ปัดลงบรรทัดใหม่ */
+    gap: 50px;
+    padding: 20px;
+}
+
+.model-wrapper {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    width: 300px; /* ความกว้างของการ์ด */
+}
+
+h2 {
+    color: #7f8c8d;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* --- SVG Styling --- */
+.muscle-svg {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 5px 5px rgba(0,0,0,0.1));
+}
+
+.body-outline {
+    fill: #ecf0f1; /* สีตัวพื้นฐาน */
+    stroke: #bdc3c7;
+    stroke-width: 1;
+}
+
+/* ชิ้นส่วนกล้ามเนื้อ */
+.muscle-group {
+    fill: #bdc3c7;      /* สีเริ่มต้นของกล้ามเนื้อ (เทา) */
+    stroke: #7f8c8d;
+    stroke-width: 1;
+    cursor: pointer;
+    transition: all 0.3s ease; /* เอฟเฟกต์นุ่มนวล */
+}
+
+/* เอฟเฟกต์เมื่อเอาเมาส์ชี้ (Hover) */
+.muscle-group:hover {
+    fill: #e74c3c;      /* เปลี่ยนเป็นสีแดง */
+    stroke: #c0392b;
+    transform: scale(1.02); /* ขยายขึ้นนิดนึง */
+}
+
+/* Responsive: มือถือ */
+@media (max-width: 768px) {
+    .main-container {
+        gap: 20px;
+    }
+}
